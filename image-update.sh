@@ -12,7 +12,7 @@ gcloud compute instances start debian-build-node --zone europe-west1-b &> out.lo
 
 # Retrieve the public ip
 IP=$(grep "external" out.log|awk '{print $5}')
-echo "Sleep until $IP is live"
+echo "Sleep until $oIP is live"
 sleep 30s
 
 echo "# Commands that you might want to run
